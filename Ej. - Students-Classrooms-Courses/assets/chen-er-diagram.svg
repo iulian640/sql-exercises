@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="750" viewBox="0 0 1500 750">
+  <rect width="1500" height="750" fill="white"/>
+  <style>
+    text { font-family: Arial, sans-serif; font-size: 13px; fill: black; }
+    .title { font-size: 15px; font-weight: bold; }
+    .pk { text-decoration: underline; }
+    .card { font-size: 15px; font-weight: bold; }
+  </style>
+
+  <!-- ENTITY to RELATIONSHIP LINES -->
+  <line x1="270" y1="380" x2="350" y2="380" stroke="black" stroke-width="2"/>
+  <line x1="530" y1="380" x2="615" y2="380" stroke="black" stroke-width="2"/>
+  <line x1="785" y1="380" x2="870" y2="380" stroke="black" stroke-width="2"/>
+  <line x1="1050" y1="380" x2="1130" y2="380" stroke="black" stroke-width="2"/>
+
+  <!-- CARDINALITY -->
+  <text x="305" y="368" text-anchor="middle" class="card">N</text>
+  <text x="582" y="368" text-anchor="middle" class="card">1</text>
+  <text x="818" y="368" text-anchor="middle" class="card">1</text>
+  <text x="1095" y="368" text-anchor="middle" class="card">N</text>
+
+  <!-- ENTITIES -->
+  <rect x="110" y="355" width="160" height="50" fill="white" stroke="black" stroke-width="2"/>
+  <text x="190" y="386" text-anchor="middle" class="title">STUDENTS</text>
+
+  <rect x="615" y="355" width="170" height="50" fill="white" stroke="black" stroke-width="2"/>
+  <text x="700" y="386" text-anchor="middle" class="title">CLASSROOMS</text>
+
+  <rect x="1130" y="355" width="160" height="50" fill="white" stroke="black" stroke-width="2"/>
+  <text x="1210" y="386" text-anchor="middle" class="title">COURSES</text>
+
+  <!-- RELATIONSHIPS (DIAMONDS) -->
+  <polygon points="440,330 530,380 440,430 350,380" fill="white" stroke="black" stroke-width="2"/>
+  <text x="440" y="376" text-anchor="middle">BELONGS</text>
+  <text x="440" y="392" text-anchor="middle">TO</text>
+
+  <polygon points="960,330 1050,380 960,430 870,380" fill="white" stroke="black" stroke-width="2"/>
+  <text x="960" y="384" text-anchor="middle">TEACHES</text>
+
+  <!-- STUDENTS ATTRIBUTES -->
+  <line x1="148" y1="356" x2="85" y2="228" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="85" cy="208" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="85" y="213" text-anchor="middle" class="pk">id_student</text>
+
+  <line x1="190" y1="355" x2="215" y2="220" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="215" cy="198" rx="85" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="215" y="203" text-anchor="middle">name_student</text>
+
+  <line x1="148" y1="404" x2="85" y2="532" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="85" cy="554" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="85" y="559" text-anchor="middle">classroom_id</text>
+
+  <!-- CLASSROOMS ATTRIBUTES -->
+  <line x1="700" y1="355" x2="700" y2="228" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="700" cy="207" rx="40" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="700" y="212" text-anchor="middle" class="pk">id</text>
+
+  <line x1="648" y1="405" x2="575" y2="555" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="575" cy="577" rx="72" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="575" y="582" text-anchor="middle">classroom</text>
+
+  <line x1="752" y1="405" x2="825" y2="555" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="825" cy="577" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="825" y="582" text-anchor="middle">description</text>
+
+  <!-- COURSES ATTRIBUTES -->
+  <line x1="1262" y1="356" x2="1340" y2="220" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="1355" cy="200" rx="40" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="1355" y="205" text-anchor="middle" class="pk">id</text>
+
+  <line x1="1210" y1="355" x2="1175" y2="220" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="1155" cy="200" rx="52" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="1155" y="205" text-anchor="middle">name</text>
+
+  <line x1="1262" y1="404" x2="1360" y2="540" stroke="black" stroke-width="1.5"/>
+  <ellipse cx="1380" cy="562" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="1380" y="567" text-anchor="middle">classroom_id</text>
+
+</svg>

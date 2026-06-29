@@ -69,10 +69,10 @@ erDiagram
 
 ## Chen ER Diagram
 
-![Chen ER Diagram](assets/diagrama%20classroom.drawio.png)
+![Chen ER Diagram](assets/chen-er-diagram.svg)
 
 ---
 
 ## Crow's Foot Diagram
 
-![Crow's Foot Diagram](assets/diagrama%20patas%20de%20gallo%20classroom.drawio.png)
+![Crow's Foot Diagram](assets/crowsfoot-diagram.svg)
