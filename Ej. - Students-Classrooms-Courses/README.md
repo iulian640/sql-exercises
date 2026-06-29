@@ -69,7 +69,7 @@ erDiagram
 
 ## Chen ER Diagram
 
-![Chen ER Diagram](assets/diagrama%20chen%20classroom.png)
+![Chen ER Diagram](assets/diagrama%20classroom.drawio.png)
 
 ---
 
