@@ -4,7 +4,7 @@
 
 This exercise starts from an unnormalized table containing data about students, classrooms, and courses. The goal is to apply the three normal forms (1NF, 2NF, and 3NF) to achieve a clean database design free of redundancy and transitive dependencies.
 
-The key insight of the exercise: **programming languages depend on the classroom**, not on the student.
+The key insight of the exercise: **courses depend on the classroom**, not on the student.
 
 ---
 
@@ -33,7 +33,7 @@ The `course1/course2/course3` column structure is removed, ensuring each field i
 
 ### 2NF — Remove partial dependencies
 
-`classroom_description` is extracted into its own `CLASSROOMS` table, since it depends only on `classroom_id` and not on `id_student`.
+`classroom_description` is extracted into its own `CLASSROOMS` table (renamed to `description`), since it depends only on `classroom_id` and not on `id_student`.
 
 ### 3NF — Remove transitive dependencies
 
@@ -62,7 +62,7 @@ erDiagram
     }
 
     STUDENTS }o--|| CLASSROOMS : "belongs to"
-    COURSES }o--|| CLASSROOMS : "taught in"
+    COURSES }o--|| CLASSROOMS : "assigned to"
 ```
 
 ---
