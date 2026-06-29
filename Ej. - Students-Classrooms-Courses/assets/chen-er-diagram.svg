@@ -1,79 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="750" viewBox="0 0 1500 750">
-  <rect width="1500" height="750" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 680">
+  <rect width="1500" height="680" fill="white"/>
   <style>
-    text { font-family: Arial, sans-serif; font-size: 13px; fill: black; }
-    .title { font-size: 15px; font-weight: bold; }
-    .pk { text-decoration: underline; }
-    .card { font-size: 15px; font-weight: bold; }
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .lbl-entity  { font-size: 15px; font-weight: bold; fill: #1e3a5f; }
+    .lbl-rel     { font-size: 12px; fill: #1a202c; }
+    .lbl-attr    { font-size: 12px; fill: #374151; }
+    .lbl-pk      { font-size: 12px; fill: #1e3a5f; font-weight: bold; text-decoration: underline; }
+    .lbl-card    { font-size: 15px; font-weight: bold; fill: #1a202c; }
   </style>
 
-  <!-- ENTITY to RELATIONSHIP LINES -->
-  <line x1="270" y1="380" x2="350" y2="380" stroke="black" stroke-width="2"/>
-  <line x1="530" y1="380" x2="615" y2="380" stroke="black" stroke-width="2"/>
-  <line x1="785" y1="380" x2="870" y2="380" stroke="black" stroke-width="2"/>
-  <line x1="1050" y1="380" x2="1130" y2="380" stroke="black" stroke-width="2"/>
+  <!-- ── CONNECTOR LINES ── -->
+  <line x1="235" y1="380" x2="345" y2="380" stroke="#4a5568" stroke-width="2"/>
+  <line x1="515" y1="380" x2="615" y2="380" stroke="#4a5568" stroke-width="2"/>
+  <line x1="785" y1="380" x2="900" y2="380" stroke="#4a5568" stroke-width="2"/>
+  <line x1="1070" y1="380" x2="1185" y2="380" stroke="#4a5568" stroke-width="2"/>
 
-  <!-- CARDINALITY -->
-  <text x="305" y="368" text-anchor="middle" class="card">N</text>
-  <text x="582" y="368" text-anchor="middle" class="card">1</text>
-  <text x="818" y="368" text-anchor="middle" class="card">1</text>
-  <text x="1095" y="368" text-anchor="middle" class="card">N</text>
+  <!-- ── CARDINALITY ── -->
+  <text x="280"  y="367" text-anchor="middle" class="lbl-card">N</text>
+  <text x="562"  y="367" text-anchor="middle" class="lbl-card">1</text>
+  <text x="842"  y="367" text-anchor="middle" class="lbl-card">1</text>
+  <text x="1128" y="367" text-anchor="middle" class="lbl-card">N</text>
 
-  <!-- ENTITIES -->
-  <rect x="110" y="355" width="160" height="50" fill="white" stroke="black" stroke-width="2"/>
-  <text x="190" y="386" text-anchor="middle" class="title">STUDENTS</text>
+  <!-- ── ENTITIES ── -->
+  <rect x="75"   y="355" width="160" height="50" rx="3" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+  <text x="155"  y="386" text-anchor="middle" class="lbl-entity">STUDENTS</text>
 
-  <rect x="615" y="355" width="170" height="50" fill="white" stroke="black" stroke-width="2"/>
-  <text x="700" y="386" text-anchor="middle" class="title">CLASSROOMS</text>
+  <rect x="615"  y="355" width="170" height="50" rx="3" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+  <text x="700"  y="386" text-anchor="middle" class="lbl-entity">CLASSROOMS</text>
 
-  <rect x="1130" y="355" width="160" height="50" fill="white" stroke="black" stroke-width="2"/>
-  <text x="1210" y="386" text-anchor="middle" class="title">COURSES</text>
+  <rect x="1185" y="355" width="160" height="50" rx="3" fill="#dbeafe" stroke="#1e40af" stroke-width="2"/>
+  <text x="1265" y="386" text-anchor="middle" class="lbl-entity">COURSES</text>
 
-  <!-- RELATIONSHIPS (DIAMONDS) -->
-  <polygon points="440,330 530,380 440,430 350,380" fill="white" stroke="black" stroke-width="2"/>
-  <text x="440" y="376" text-anchor="middle">BELONGS</text>
-  <text x="440" y="392" text-anchor="middle">TO</text>
+  <!-- ── RELATIONSHIPS ── -->
+  <polygon points="430,325 515,380 430,435 345,380" fill="white" stroke="#1e40af" stroke-width="2"/>
+  <text x="430" y="375" text-anchor="middle" class="lbl-rel">BELONGS</text>
+  <text x="430" y="391" text-anchor="middle" class="lbl-rel">TO</text>
 
-  <polygon points="960,330 1050,380 960,430 870,380" fill="white" stroke="black" stroke-width="2"/>
-  <text x="960" y="384" text-anchor="middle">TEACHES</text>
+  <polygon points="985,325 1070,380 985,435 900,380" fill="white" stroke="#1e40af" stroke-width="2"/>
+  <text x="985" y="384" text-anchor="middle" class="lbl-rel">TEACHES</text>
 
-  <!-- STUDENTS ATTRIBUTES -->
-  <line x1="148" y1="356" x2="85" y2="228" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="85" cy="208" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="85" y="213" text-anchor="middle" class="pk">id_student</text>
+  <!-- ── ATTRIBUTE LINES ── -->
+  <line x1="118"  y1="356" x2="90"   y2="228" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="200"  y1="356" x2="248"  y2="228" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="155"  y1="405" x2="155"  y2="529" stroke="#9ca3af" stroke-width="1.5"/>
 
-  <line x1="190" y1="355" x2="215" y2="220" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="215" cy="198" rx="85" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="215" y="203" text-anchor="middle">name_student</text>
+  <line x1="700"  y1="355" x2="700"  y2="228" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="648"  y1="405" x2="578"  y2="529" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="752"  y1="405" x2="822"  y2="529" stroke="#9ca3af" stroke-width="1.5"/>
 
-  <line x1="148" y1="404" x2="85" y2="532" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="85" cy="554" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="85" y="559" text-anchor="middle">classroom_id</text>
+  <line x1="1215" y1="356" x2="1162" y2="228" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="1315" y1="356" x2="1362" y2="228" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="1265" y1="405" x2="1265" y2="529" stroke="#9ca3af" stroke-width="1.5"/>
 
-  <!-- CLASSROOMS ATTRIBUTES -->
-  <line x1="700" y1="355" x2="700" y2="228" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="700" cy="207" rx="40" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="700" y="212" text-anchor="middle" class="pk">id</text>
+  <!-- ── ATTRIBUTES ── -->
+  <!-- STUDENTS -->
+  <ellipse cx="88"  cy="202" rx="82" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="88"  y="207" text-anchor="middle" class="lbl-pk">id_student</text>
 
-  <line x1="648" y1="405" x2="575" y2="555" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="575" cy="577" rx="72" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="575" y="582" text-anchor="middle">classroom</text>
+  <ellipse cx="262" cy="202" rx="88" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="262" y="207" text-anchor="middle" class="lbl-attr">name_student</text>
 
-  <line x1="752" y1="405" x2="825" y2="555" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="825" cy="577" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="825" y="582" text-anchor="middle">description</text>
+  <ellipse cx="155" cy="555" rx="78" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="155" y="560" text-anchor="middle" class="lbl-attr">classroom_id</text>
 
-  <!-- COURSES ATTRIBUTES -->
-  <line x1="1262" y1="356" x2="1340" y2="220" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="1355" cy="200" rx="40" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="1355" y="205" text-anchor="middle" class="pk">id</text>
+  <!-- CLASSROOMS -->
+  <ellipse cx="700" cy="202" rx="38" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="700" y="207" text-anchor="middle" class="lbl-pk">id</text>
 
-  <line x1="1210" y1="355" x2="1175" y2="220" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="1155" cy="200" rx="52" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="1155" y="205" text-anchor="middle">name</text>
+  <ellipse cx="554" cy="555" rx="72" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="554" y="560" text-anchor="middle" class="lbl-attr">classroom</text>
 
-  <line x1="1262" y1="404" x2="1360" y2="540" stroke="black" stroke-width="1.5"/>
-  <ellipse cx="1380" cy="562" rx="78" ry="26" fill="white" stroke="black" stroke-width="1.5"/>
-  <text x="1380" y="567" text-anchor="middle">classroom_id</text>
+  <ellipse cx="846" cy="555" rx="80" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="846" y="560" text-anchor="middle" class="lbl-attr">description</text>
 
+  <!-- COURSES -->
+  <ellipse cx="1148" cy="202" rx="38" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="1148" y="207" text-anchor="middle" class="lbl-pk">id</text>
+
+  <ellipse cx="1376" cy="202" rx="50" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="1376" y="207" text-anchor="middle" class="lbl-attr">name</text>
+
+  <ellipse cx="1265" cy="555" rx="78" ry="26" fill="white" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="1265" y="560" text-anchor="middle" class="lbl-attr">classroom_id</text>
 </svg>
