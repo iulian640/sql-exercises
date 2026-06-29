@@ -11,14 +11,10 @@ erDiagram
         string description
     }
     COURSES {
+        int classroom_id FK
         int id PK
         string name
     }
-    CLASSROOM_COURSES {
-        int classroom_id FK
-        int course_id FK
-    }
 
     STUDENTS }o--|| CLASSROOMS : "pertenece a"
-    CLASSROOMS ||--o{ CLASSROOM_COURSES : "tiene"
-    COURSES ||--o{ CLASSROOM_COURSES : "impartido en"
+    COURSES }o--|| CLASSROOMS : "imparte"
