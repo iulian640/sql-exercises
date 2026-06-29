@@ -1,14 +1,14 @@
-# Normalización de Base de Datos — Students, Classrooms & Courses
+# Database Normalization — Students, Classrooms & Courses
 
-## Descripción
+## Description
 
-Este ejercicio parte de una tabla sin normalizar que contiene datos de estudiantes, aulas y cursos. El objetivo es aplicar las tres formas normales (1NF, 2NF y 3NF) para obtener un diseño de base de datos limpio, sin redundancias ni dependencias transitivas.
+This exercise starts from an unnormalized table containing data about students, classrooms, and courses. The goal is to apply the three normal forms (1NF, 2NF, and 3NF) to achieve a clean database design free of redundancy and transitive dependencies.
 
-La clave del ejercicio está en esta pista: **los lenguajes de programación dependen del aula**, no del estudiante.
+The key insight of the exercise: **programming languages depend on the classroom**, not on the student.
 
 ---
 
-## Tabla original (sin normalizar)
+## Original Table (unnormalized)
 
 | id_student | name_student | classroom | classroom_description | course1 | course2 | course3 |
 |---|---|---|---|---|---|---|
@@ -17,31 +17,31 @@ La clave del ejercicio está en esta pista: **los lenguajes de programación dep
 | 3 | Carla Gómez | A101 | Web Frontend | HTML | CSS | JavaScript |
 | 4 | Diego López | A103 | Desarrollo Mobile | Kotlin | Swift | Dart |
 
-### Problemas identificados
+### Problems identified
 
-- `course1`, `course2`, `course3` son grupos de repetición → viola **1NF**
-- `classroom_description` depende solo de `classroom`, no del estudiante → viola **2NF**
-- Los cursos dependen del aula, no del estudiante (dependencia transitiva) → viola **3NF**
-
----
-
-## Normalización
-
-### 1NF — Eliminar grupos de repetición
-
-Se elimina la estructura de columnas `course1/course2/course3` y se garantiza que cada campo sea atómico.
-
-### 2NF — Eliminar dependencias parciales
-
-`classroom_description` se extrae a su propia tabla `CLASSROOMS`, ya que depende únicamente de `classroom_id` y no de `id_student`.
-
-### 3NF — Eliminar dependencias transitivas
-
-Los cursos se extraen a su propia tabla `COURSES` con una FK a `CLASSROOMS`, porque dependen del aula, no del estudiante.
+- `course1`, `course2`, `course3` are repeating groups → does not meet **1NF**
+- `classroom_description` depends only on `classroom`, not on the student → does not meet **2NF**
+- Courses depend on the classroom, not the student (transitive dependency) → does not meet **3NF**
 
 ---
 
-## Modelo final normalizado
+## Normalization
+
+### 1NF — Remove repeating groups
+
+The `course1/course2/course3` column structure is removed, ensuring each field is atomic.
+
+### 2NF — Remove partial dependencies
+
+`classroom_description` is extracted into its own `CLASSROOMS` table, since it depends only on `classroom_id` and not on `id_student`.
+
+### 3NF — Remove transitive dependencies
+
+Courses are extracted into their own `COURSES` table with a FK to `CLASSROOMS`, because they depend on the classroom, not the student.
+
+---
+
+## Final normalized model
 
 ```mermaid
 erDiagram
@@ -61,18 +61,18 @@ erDiagram
         int classroom_id FK
     }
 
-    STUDENTS }o--|| CLASSROOMS : "pertenece a"
-    COURSES }o--|| CLASSROOMS : "imparte"
+    STUDENTS }o--|| CLASSROOMS : "belongs to"
+    COURSES }o--|| CLASSROOMS : "taught in"
 ```
 
 ---
 
-## Diagrama ER de Chen
+## Chen ER Diagram
 
-![Diagrama ER de Chen](assets/diagrama%20chen%20classroom.png)
+![Chen ER Diagram](assets/diagrama%20chen%20classroom.png)
 
 ---
 
-## Diagrama de Patas de Gallo
+## Crow's Foot Diagram
 
-![Diagrama de Patas de Gallo](assets/diagrama%20patas%20de%20gallo%20classroom.drawio.png)
+![Crow's Foot Diagram](assets/diagrama%20patas%20de%20gallo%20classroom.drawio.png)
