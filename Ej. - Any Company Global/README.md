@@ -33,9 +33,13 @@ _(pendiente)_
 
 ## Diagrama ER (Chen)
 
+![Diagrama ER de Chen](./docs/diagrama.drawio.svg)
+
 Fuente editable: [`docs/diagrama.drawio`](./docs/diagrama.drawio)
 
-_(pendiente: exportar una imagen actualizada del diagrama corregido para incrustarla aquí)_
+## Diagrama de la base de datos normalizada (DBeaver)
+
+_(pendiente: captura del ER Diagram de DBeaver)_
 
 ## Script: país de la venta id = 3
 
