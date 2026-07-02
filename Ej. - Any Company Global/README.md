@@ -39,7 +39,7 @@ Fuente editable: [`docs/diagrama.drawio`](./docs/diagrama.drawio)
 
 ## Diagrama de la base de datos normalizada (DBeaver)
 
-_(pendiente: captura del ER Diagram de DBeaver)_
+![Diagrama ER en DBeaver](./docs/dbeaver_er_diagram.png)
 
 ## Script: país de la venta id = 3
 
