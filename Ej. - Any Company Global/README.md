@@ -54,3 +54,5 @@ WHERE sale.id = 3;
 ```
 
 Output: `Canada`
+
+![Resultado del script en DBeaver](./docs/script_result_canada.png)
