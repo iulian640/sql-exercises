@@ -33,9 +33,9 @@ _(pendiente)_
 
 ## Diagrama ER (Chen)
 
-![Diagrama ER de Chen](./docs/DiagramAnyCompany.drawio.svg)
-
 Fuente editable: [`docs/diagrama.drawio`](./docs/diagrama.drawio)
+
+_(pendiente: exportar una imagen actualizada del diagrama corregido para incrustarla aquí)_
 
 ## Script: país de la venta id = 3
 
