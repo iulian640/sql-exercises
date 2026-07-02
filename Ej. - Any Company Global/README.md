@@ -43,4 +43,14 @@ Fuente editable: [`docs/diagrama.drawio`](./docs/diagrama.drawio)
 
 ## Script: país de la venta id = 3
 
-_(pendiente)_
+[`get_country_by_sale_id.sql`](./get_country_by_sale_id.sql)
+
+```sql
+SELECT country.name AS country
+FROM sale
+JOIN city ON sale.city_id = city.id
+JOIN country ON city.country_id = country.id
+WHERE sale.id = 3;
+```
+
+Output: `Canada`
