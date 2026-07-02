@@ -71,14 +71,14 @@ erDiagram
 
 ## Chen ER Diagram
 
-![Chen ER Diagram](assets/chen-er-diagram.svg)
+![Chen ER Diagram](<assets/diagrama classroom.drawio.png>)
 
-PNG export: [`assets/diagrama classroom.drawio.png`](<assets/diagrama classroom.drawio.png>)
+SVG source: [`assets/chen-er-diagram.svg`](assets/chen-er-diagram.svg)
 
 ---
 
 ## Crow's Foot Diagram
 
-![Crow's Foot Diagram](assets/crowsfoot-diagram.svg)
+![Crow's Foot Diagram](<assets/diagrama patas de gallo classroom.drawio.png>)
 
-PNG export: [`assets/diagrama patas de gallo classroom.drawio.png`](<assets/diagrama patas de gallo classroom.drawio.png>)
+SVG source: [`assets/crowsfoot-diagram.svg`](assets/crowsfoot-diagram.svg)
