@@ -20,6 +20,7 @@ The key insight of the exercise: **courses depend on the classroom**, not on the
 ### Problems identified
 
 - `course1`, `course2`, `course3` are repeating groups → does not meet **1NF**
+- `name_student` mixes first and last name in a single field, not an atomic value → does not meet **1NF**
 - `classroom_description` depends only on `classroom`, not on the student → does not meet **2NF**
 - Courses depend on the classroom, not the student (transitive dependency) → does not meet **3NF**
 
@@ -29,7 +30,7 @@ The key insight of the exercise: **courses depend on the classroom**, not on the
 
 ### 1NF — Remove repeating groups
 
-The `course1/course2/course3` column structure is removed, ensuring each field is atomic.
+The `course1/course2/course3` column structure is removed, ensuring each field is atomic. `name_student` is also split into `first_name` and `last_name`, since a full name is not an atomic value.
 
 ### 2NF — Remove partial dependencies
 
@@ -47,7 +48,8 @@ Courses are extracted into their own `COURSES` table with a FK to `CLASSROOMS`, 
 erDiagram
     STUDENTS {
         int id_student PK
-        string name_student
+        string first_name
+        string last_name
         int classroom_id FK
     }
     CLASSROOMS {
