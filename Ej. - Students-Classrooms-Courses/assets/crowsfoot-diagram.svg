@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
-  <rect width="760" height="420" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 452">
+  <rect width="760" height="452" fill="white"/>
   <style>
     text { font-family: Arial, Helvetica, sans-serif; }
     .tbl-header { font-size: 13px; font-weight: bold; fill: white; }
@@ -15,11 +15,11 @@
   <!-- ══ CONNECTORS ══ -->
 
   <!-- STUDENTS.classroom_id → CLASSROOMS.id  (L-shape) -->
-  <polyline points="230,366 255,366 255,112 270,112" fill="none" stroke="#4a5568" stroke-width="2"/>
-  <!-- Crow's foot (many) at STUDENTS right (x=230, y=366) -->
-  <line x1="245" y1="358" x2="230" y2="366" stroke="#4a5568" stroke-width="2"/>
-  <line x1="245" y1="374" x2="230" y2="366" stroke="#4a5568" stroke-width="2"/>
-  <line x1="251" y1="358" x2="251" y2="374" stroke="#4a5568" stroke-width="2"/>
+  <polyline points="230,398 255,398 255,112 270,112" fill="none" stroke="#4a5568" stroke-width="2"/>
+  <!-- Crow's foot (many) at STUDENTS right (x=230, y=398) -->
+  <line x1="245" y1="390" x2="230" y2="398" stroke="#4a5568" stroke-width="2"/>
+  <line x1="245" y1="406" x2="230" y2="398" stroke="#4a5568" stroke-width="2"/>
+  <line x1="251" y1="390" x2="251" y2="406" stroke="#4a5568" stroke-width="2"/>
   <!-- One (mandatory) at CLASSROOMS left (x=270, y=112) -->
   <line x1="261" y1="104" x2="261" y2="120" stroke="#4a5568" stroke-width="2"/>
 
@@ -33,7 +33,7 @@
   <line x1="499" y1="104" x2="499" y2="120" stroke="#4a5568" stroke-width="2"/>
 
   <!-- Cardinality labels -->
-  <text x="222" y="343" text-anchor="middle" class="lbl-card">N</text>
+  <text x="222" y="375" text-anchor="middle" class="lbl-card">N</text>
   <text x="252" y="100"  text-anchor="middle" class="lbl-card">1</text>
   <text x="538" y="343" text-anchor="middle" class="lbl-card">N</text>
   <text x="508" y="100"  text-anchor="middle" class="lbl-card">1</text>
@@ -56,19 +56,21 @@
   <text x="318" y="180" class="tbl-cell">description</text>
 
   <!-- ══ STUDENTS TABLE ══ -->
-  <rect x="30" y="250" width="200" height="132" rx="4" fill="white" stroke="#334155" stroke-width="2"/>
+  <rect x="30" y="250" width="200" height="164" rx="4" fill="white" stroke="#334155" stroke-width="2"/>
   <rect x="31" y="251" width="198" height="35" fill="#1e293b"/>
   <rect x="31" y="287" width="198" height="31" fill="#eff6ff"/>
-  <rect x="31" y="351" width="198" height="31" fill="#fffbeb"/>
+  <rect x="31" y="383" width="198" height="31" fill="#fffbeb"/>
   <line x1="30"  y1="286" x2="230" y2="286" stroke="#334155" stroke-width="2"/>
   <line x1="30"  y1="318" x2="230" y2="318" stroke="#cbd5e0" stroke-width="1"/>
   <line x1="30"  y1="350" x2="230" y2="350" stroke="#cbd5e0" stroke-width="1"/>
+  <line x1="30"  y1="382" x2="230" y2="382" stroke="#cbd5e0" stroke-width="1"/>
   <text x="130" y="272"  text-anchor="middle" class="tbl-header">STUDENTS</text>
   <text x="46"  y="306"  class="badge-pk">PK</text>
   <text x="78"  y="306"  class="tbl-pk">id_student</text>
-  <text x="78"  y="337"  class="tbl-cell">name_student</text>
-  <text x="46"  y="369"  class="badge-fk">FK</text>
-  <text x="78"  y="369"  class="tbl-fk">classroom_id</text>
+  <text x="78"  y="337"  class="tbl-cell">first_name</text>
+  <text x="78"  y="369"  class="tbl-cell">last_name</text>
+  <text x="46"  y="401"  class="badge-fk">FK</text>
+  <text x="78"  y="401"  class="tbl-fk">classroom_id</text>
 
   <!-- ══ COURSES TABLE ══ -->
   <rect x="530" y="250" width="200" height="132" rx="4" fill="white" stroke="#334155" stroke-width="2"/>
